@@ -98,7 +98,6 @@ The response contains `_dvwa`. Removing the space after the pipe means the filte
 
 The blacklist entry is more specific than the developer intended. A single space in the pattern turns a broad rule into a narrow one, and the narrower version misses the exact case the rule was meant to block. This is the general failure mode of blacklists: the author has to imagine every valid form of the attack in advance, and any form they miss becomes the bypass.
 
----
 
 ## Impossible
 
@@ -120,7 +119,7 @@ The response is `ERROR: You have entered an invalid IP.` The pipe and command po
 
 Nothing in the input is treated as a shell fragment. The validator asks a positive question about the shape of a valid IPv4 address rather than a negative one about known-bad characters. Only inputs that pass the positive check are allowed through, and by the time the string reaches `shell_exec` it has been rebuilt from four validated numbers rather than passed on from the user.
 
----
+
 
 ## Takeaways
 
